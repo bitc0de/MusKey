@@ -1,4 +1,5 @@
 python-telegram-bot
+telegram
 argparse
 youtube-dl
 ffprobe
