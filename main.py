@@ -76,6 +76,8 @@ def web(bot, update, user_data, song=None):
             return None
 
         # make command that will be later executed
+        chat_id = update.message.chat_id
+        bot.send_message(chat_id, "Estoy buscando la cancion..dame unos segundos..")
         command = 'youtube-dl --embed-thumbnail --no-warnings --extract-audio --audio-format mp3 --id ' + search_results[0]
         title2 = search_results[0]
 
