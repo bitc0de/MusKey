@@ -1,5 +1,4 @@
 telegram
-re
 urllib
 os
 sys
