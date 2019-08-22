@@ -1,7 +1,5 @@
 python-telegram-bot
-subprocess
 telegram.ext
-glob
 random
 re
 urllib
