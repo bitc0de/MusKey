@@ -10,7 +10,7 @@ WEB = range(1)
 
 def cnc1(bot, update):
     global title2
-    update.message.reply_text("Tu descarga está lista:")
+    update.message.reply_text("Tu descarga esta lista:")
     print (title2)
     bot.send_audio(chat_id, audio=open(title2 + ".mp3", 'rb'))
 
@@ -49,7 +49,7 @@ def video_title(url):
 
 
 def start(bot, update, user_data):
-    update.message.reply_text("Introduce el nombre de canción:")
+    update.message.reply_text("Introduce el nombre de cancion:")
 
     return WEB
 
@@ -114,7 +114,7 @@ def web(bot, update, user_data, song=None):
 def cancelar(bot, update, user_data):
     user_data.clear()
 
-    update.message.reply_text("La búsqueda ha sido cancelada.", reply_markup=ReplyKeyboardRemove())
+    update.message.reply_text("La busqueda ha sido cancelada.", reply_markup=ReplyKeyboardRemove())
 
     return telegram.ext.ConversationHandler.END
 
