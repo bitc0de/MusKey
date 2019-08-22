@@ -1,5 +1,4 @@
 telegram
-subprocess
 telegram.ext
 glob
 random
