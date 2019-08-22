@@ -103,9 +103,10 @@ def web(bot, update, user_data, song=None):
 
     chat_id = update.message.chat_id
     bot.send_message(chat_id, "Disfruta de "+ user_data['web'])
+    bot.send_message(chat_id, "Recuerda escribir /start para buscar de nuevo")
     os.rename((title2+".mp3"), (song + ".mp3"))
     bot.send_audio(chat_id, audio=open(song+".mp3", 'rb'))
-    bot.send_message(chat_id, "Recuerda escribir /start para buscar de nuevo")
+
 
 
     user_data.clear()
