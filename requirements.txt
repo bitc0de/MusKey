@@ -1,6 +1,6 @@
 telegram
-urllib
 os
 sys
 argparse
 time
+youtube-dl
