@@ -1,2 +1,8 @@
 telegram
 random
+re
+urllib
+os
+sys
+argparse
+time
