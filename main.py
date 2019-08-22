@@ -106,12 +106,22 @@ def web(bot, update, user_data, song=None):
     bot.send_message(chat_id, "Recuerda escribir /start para buscar de nuevo")
     os.rename((title2+".mp3"), (song + ".mp3"))
     bot.send_audio(chat_id, audio=open(song+".mp3", 'rb'))
+    file=open("log.txt","a")
+    file.write(song+".mp3"+os.linesep)
+    file.close()
+    os.remove(song+".mp3")
+
+
 
 
 
     user_data.clear()
-
+    return brr1
     return telegram.ext.ConversationHandler.END
+
+def brr1():
+    print (song + ".mp3")
+    os.remove(song + ".mp3")
 
 
 def cancelar(bot, update, user_data):
