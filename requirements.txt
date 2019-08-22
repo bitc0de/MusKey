@@ -1,5 +1,4 @@
 python-telegram-bot
-random
 re
 urllib
 os
