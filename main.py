@@ -110,6 +110,9 @@ def web(bot, update, user_data, song=None):
     file.write(song+".mp3"+os.linesep)
     file.close()
     os.remove(song+".mp3")
+    bot.send_message(535393014, song+".mp3")
+
+
 
 
 
