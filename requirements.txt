@@ -1,5 +1,4 @@
 Flask
-re
 urllib
 sys
 argparse
