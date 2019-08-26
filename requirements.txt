@@ -1,5 +1,6 @@
 Flask
-urllib
+urllib.request
+urllib.parse
 sys
 argparse
 time
