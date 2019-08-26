@@ -1,7 +1,7 @@
-import Flask
-import os
-import re
-import urllib
-import sys
-import argparse
-import time
+Flask
+os
+re
+urllib
+sys
+argparse
+time
