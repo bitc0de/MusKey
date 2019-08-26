@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+<div class="jumbotron">
+  <h1 class="display-4">MusKey</h1>
+  <form action="/buscarcancion" method="POST">
+  <div class="form-group">
+    <label for="cnc">Descarga tus canciones favoritas</label>
+    <input type="text" class="form-control" name="cnc" aria-describedby="emailHelp" placeholder="Introduce una canción">
+    <small id="emailHelp" class="form-text text-muted">Ejemplo: where is my mind the pixies</small>
+  </div>
+  <button type="submit" class="btn btn-primary" onclick="$('#loading').show();">Buscar</button>
+</form>
+<br><br>
+
+
+
+<div id="loading" style="display:none;"><img src="img/loading.gif" alt="" />Cargando, espera unos segundos por favor...</div>
+
+
+
+
+
+</div>
+{% endblock %}
