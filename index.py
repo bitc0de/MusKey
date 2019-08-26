@@ -16,8 +16,6 @@ nombreCancion=""
 def home():
     return render_template('home.html')
 
-
-
 @app.route('/buscarcancion', methods=['POST'])
 def buscarCancion():
     global nombreCancion
@@ -32,7 +30,7 @@ def buscarCancion():
                 html_content = urlopen("http://www.youtube.com/results?" + query_string)
 
                 search_results = re.findall(r'href=\"\/watch\?v=(.{11})', html_content.read().decode())
-                command = 'youtube-dl --embed-thumbnail --no-warnings --extract-audio --audio-format mp3 --id ' + \
+                command = 'youtube-dl -v -4 --embed-thumbnail --no-warnings --extract-audio --audio-format mp3 --id ' + \
                           search_results[0]
                 title2 = search_results[0]
                 os.system(command)
@@ -40,10 +38,10 @@ def buscarCancion():
                 os.rename((title2+".mp3"), (nombreCancion+".mp3"))
                 shutil.move((nombreCancion+".mp3"), ("./canciones/"+nombreCancion+".mp3"))
 
+
                 return render_template('cancion.html', variable=nombreCancion)
             except:
                 pass
-
 
 @app.route('/return-files', methods=['GET'])
 def return_file():
@@ -52,12 +50,10 @@ def return_file():
 
 
 
-
-
-
 @app.route('/about')
 def about():
     return render_template('about.html')
+
 
 if __name__ =='__main__':
     app.run(debug=True)
