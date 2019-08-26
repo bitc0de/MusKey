@@ -41,7 +41,7 @@ def buscarCancion():
 
                 return render_template('cancion.html', variable=nombreCancion)
             except:
-                pass
+                return "Error al descargar la cancion"
 
 @app.route('/return-files', methods=['GET'])
 def return_file():
